@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tilt jQuery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Amin Fejzic">
+        <meta name="keywords" content="HTML, CSS, jQuery">
+
+        <link rel="stylesheet" type="text/css" href="Tilt+bckg.css">
+        <link rel="icon" type="image/png" href="circle.png">
+
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
+
+    </head>
+
+
+<header>
+    <img src="circle.png"  class="pict">
+    
+    <!--   jQuery background shuffle  -->
+
+    <nav id="menu">
+        <img src="tunel.jpg" style="opacity: 0.7;" alt="Background image">
+        
+    <ul>
+            <li><a data-image="train.jpg" href="#about">about</a></li>
+            <li><a data-image="tunel2.jpg" href="#info">info</a></li>  
+        </ul>
+    </nav>
+
+    <script   src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+
+    <script>
+        $(function(){
+
+            var image=$('#menu').find('img').attr('src');
+            $('#menu ul li a').mouseover(function(){
+
+                var currentImage=$(this).attr('data-image');
+                $(this).parent().parent().parent().find('img').attr('src', currentImage);
+                $('#menu img').css('opacity','0.5');
+            });
+
+            $('#menu ul li a').mouseout(function(){
+                $('#menu img').css('opacity','1');
+            });
+
+        });
+    </script>
+     
+     <div class="text">
+        <p>"Make it simple, but significant." <br> Don Draper</p>
+    </div>
+
+     <!-- to top -->
+     <div><a href="#"> <i class="fas fa-chevron-up"></i></a></div>
+</header>
+
+<body>
+    <div class="gradient"></div>
+ <section>      
+<div id="about"><h1>about</h1></div>
+<p id="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<img src="watch.jpg" class="watch">
+</section>
+<!-- txt inside tilt  -->
+
+<div class="container">
+    <div class="box">
+        <div class="imgBx">
+            <img src="book3.jpg" class="imgBxpic">
+</div>
+<div class="contentBx">
+    <p>half blank page</p>
+</div>
+</div>
+</div></div>
+
+<div class="container2">
+<div class="box2">
+    <div class="imgBx2">
+        <img src="book2.jpg" class="imgBxpic">
+</div>
+<div class="contentBx2">
+<p>messed up book</p>
+</div>
+</div>
+ </div>
+
+ <div class="container3">
+     <div class="box3">
+         <div class="imgBx3">
+            <img src="book.jpg" class="imgBxpic">
+         </div>
+         <div class="contentBx3">
+             <p>library edition</p>
+         </div>
+     </div>
+ </div>
+
+ <!--   GRID section  -->
+
+<div class="grid">
+    <div class="grid2"></div></div>
+
+    <h3>Inspiration!</h3>
+
+    <img src="castle.jpg" class="inspict" >
+
+    <img src="nurnberg.jpg" class="inspict2" >
+     <h3 id="h3">Introduction </h3>
+    <p id="par1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+ 
+    <h3 id="h3b">Interests </h3>
+    <p id="par2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+ 
+
+<!---->
+
+    </body>
+    <footer>
+
+     <div class="grid3">
+         
+         <div class="gridpic">
+         <div class="grid4"></div>     
+         
+         <h5 id="info">info</h5>
+          <p id="info2">Stay in contact...</p>
+         <!--   SOCIAL MEDIA  -->
+         <div class="socmedia">
+            <i class="fab fa-facebook-f"></i> 
+            <i class="fab fa-linkedin-in"></i> 
+<a href="https://www.behance.net/aminfejzic   " target="_blank"><i class="fab fa-behance"></i></a> 
+            <i class="fab fa-dribbble"></i>
+             <i class="fab fa-instagram"></i>  
+         </div>
+    <p id="gmail"> email@gmail.com
+        <br><br>
+        81479 Herterichstr. Solln,
+        <br> München, Deutschland
+    </p>
+        
+     </div></div>
+     
+    </footer>
+    <!--JAVASCRIPT library Tilt.js at the end of the body -->
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+  
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".pict ,.text ,.fa-chevron-up, .watch ,.inspict2 ,.inspict"), {
+		max: 25,
+		speed: 400
+	});
+	
+	//It also supports NodeList
+	VanillaTilt.init(document.querySelectorAll(".pict ,.text ,.fa-chevron-up, .watch ,.inspict2 ,.inspict"));
+    
+</script>
+</html>
